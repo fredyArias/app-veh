@@ -1,5 +1,5 @@
 import { Console } from "../Console"
-import { Message } from "../Message"
+import { Message } from "./Message"
 import { Command } from "../Command"
 import { Vehicle } from "../Model/Vehicle"
 

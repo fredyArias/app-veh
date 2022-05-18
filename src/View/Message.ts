@@ -1,4 +1,3 @@
-
 export enum Message {
     TITLE = 'Vehicle App!',
     MENU = 

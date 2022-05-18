@@ -1,19 +1,19 @@
 import { Vehicle } from "./Model/Vehicle"
-import { MenuView } from "./View/MenuView"
+import { View } from "./View/View"
 
 export class AppVehicle {
-    private view: MenuView
+    private view: View
     vehicleList: Vehicle[]
 
     constructor() {
-        this.view = new MenuView()
+        this.view = new View()
     }
 
-    start() {
+    main() {
         this.play()
     }
 
     private play() {
-        this.view.init(this.vehicleList)
+        this.view.showMenu(this.vehicleList)
     }
 }

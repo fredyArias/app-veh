@@ -1,5 +1,5 @@
 import { Console } from "../Console"
-import { Message } from "../Message"
+import { Message } from "./Message"
 import { VehicleType, Vehicle } from "../Model/Vehicle"
 
 export class RegisterVehicleView {

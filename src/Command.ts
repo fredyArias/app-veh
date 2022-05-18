@@ -1,5 +1,5 @@
 import { Vehicle} from "./Model/Vehicle"
-import { RegisterVehicleView } from "./View/RegistervehicleView"
+import { View } from "./View/View"
 
 export class Command {
     allVehicles: Vehicle[]
@@ -10,8 +10,8 @@ export class Command {
 
     manage(value: number) {
         if(value === 1) {
-            const registerVehicleView = new RegisterVehicleView()
-            this.registerVehicle(registerVehicleView.getDates())
+            const view = new View()
+            this.registerVehicle(view.registerVehicle())
         }
         else if(value === 2) {
             this.findVehicle('')

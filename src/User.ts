@@ -1,4 +1,3 @@
-
 export type UserType = Selller | Buyer
 
 export class User {
