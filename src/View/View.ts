@@ -1,22 +1,20 @@
-import { Vehicle } from "../Model/Vehicle"
-import { MenuView } from "./MenuView"
-import { RegisterVehicleView } from "./RegistervehicleView"
+import { Controller } from "../Controller/Controller"
+import { MainView } from "./MainView"
 
 export class View {
-    private menu: MenuView
-    private registerVehicle: RegisterVehicleView
-
+    private main: MainView
+    private controller: Controller
+    
     constructor() {
-        this.menu = new MenuView()
-        this.registerVehicle = new RegisterVehicleView()
+        this.main = new MainView()
+        this.controller = new Controller()
     }
 
-    showMenu(vehicleList: Vehicle[]) {
-        this.menu.init(vehicleList)
+    init() {
+        this.show(this.main)
     }
 
-    showRegisterVehicle() {
-        const vehicle = this.registerVehicle.getDates()
-        return vehicle
+    private show(view: MainView) {
+        view.init(this.controller)
     }
 }

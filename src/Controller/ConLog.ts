@@ -1,4 +1,4 @@
-export class Console {
+export abstract class ConLog {
     static readNumber(b: string): number {
         return 
     }
@@ -7,7 +7,7 @@ export class Console {
         return
     }
 
-    static writeln(b: string ): string  {
+    static write(b: string ): string  {
         return
     }
 }
