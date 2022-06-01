@@ -16,7 +16,7 @@ export class Controller {
                 this.registator.addVehicle()
                 break;
             case 2:
-               
+                this.search.getDataToSearch()
             default:
                 break;
         }
