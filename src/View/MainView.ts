@@ -3,10 +3,8 @@ import { Controller } from "../Controller/Controller"
 import { Message } from "./Message"
 
 export class MainView {
-    private inputValue: number
-
-    init(controller: Controller) {
-        this.inputValue = ConLog.readNumber(Message.MAIN)
-        this.inputValue !== 3 ? controller.start(this.inputValue) : ConLog.write('Exit')
+    show(controller: Controller) {
+        const inputValue = ConLog.readNumber(Message.MAIN)
+        inputValue !== 3 ? controller.start(inputValue) : ConLog.write('Exit')
     }
 }

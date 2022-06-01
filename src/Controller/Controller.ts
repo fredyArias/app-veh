@@ -1,33 +1,24 @@
-import { ConLog } from "./ConLog";
-import { DB } from "../DB";
-import { Vehicle } from "../Model/Vehicle";
-import { Message } from "../View/Message";
+import { RegistatorController } from "./RegistatorController"
+import { SearchController } from "./SearchController"
 
 export class Controller {
-    vehicle: Vehicle
+    registator: RegistatorController
+    search: SearchController
+
+    constructor() {
+        this.registator = new RegistatorController()
+        this.search = new SearchController()
+    }
 
     start(value: number) {
         switch (value) {
             case 1:
-                this.createVehicle()
+                this.registator.addVehicle()
                 break;
-        
+            case 2:
+               
             default:
                 break;
         }
     }
-
-    private createVehicle() {
-        ConLog.write(Message.REGISTER_VEHICLE)
-        const plate = ConLog.readString(Message.ENTER_PLATE)
-        const brand = ConLog.readString(Message.ENTER_BRAND)
-        const model = ConLog.readNumber(Message.ENTER_MODEL)
-
-        this.registerVehicle(this.vehicle = new Vehicle(plate, brand, model))
-    }
-
-    private registerVehicle(vehicle: Vehicle) {
-        DB.add(vehicle)
-    }
-
 }

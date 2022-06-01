@@ -12,5 +12,6 @@ export enum Message {
     ENTER_BRAND = 'Enter brand:',
     ENTER_MODEL = 'Enter model:',
     VEHICLE_FOUND = 'Vehicle found',
-    VEHICLE_NOT_FOUND = 'Vehicle not found'
+    VEHICLE_NOT_FOUND = 'Vehicle not found',
+    SEARCH = 'Search:',
 }

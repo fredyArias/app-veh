@@ -2,12 +2,12 @@ import { Controller } from "../Controller/Controller"
 import { MainView } from "./MainView"
 
 export class View {
-    private main: MainView
     private controller: Controller
+    private main: MainView
     
     constructor() {
-        this.main = new MainView()
         this.controller = new Controller()
+        this.main = new MainView()
     }
 
     init() {
@@ -15,6 +15,6 @@ export class View {
     }
 
     private show(view: MainView) {
-        view.init(this.controller)
+        view.show(this.controller)
     }
 }
