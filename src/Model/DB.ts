@@ -1,22 +1,20 @@
-import { Message } from "../View/Message"
-import { Vehicle } from "./Vehicle"
+import { Message } from '../View/Message'
+import { Vehicle } from './Vehicle'
 
-export class DB {
-    static allVehicles: Vehicle[]
+export abstract class DB {
+  static allVehicles: Vehicle[]
 
-    static add(vehicle: Vehicle) {
-        this.allVehicles.push(vehicle)
-    }
+  static add(vehicle: Vehicle) {
+    this.allVehicles.push(vehicle)
+  }
 
-    static search(plate: string){
-        this.allVehicles.find(vehicle => {
-            if(vehicle.plate === plate) {
-                return vehicle
-            }
-            else {
-                return console.log(Message.VEHICLE_NOT_FOUND) 
-            }
-        })
-    }
+  static search(plate: string) {
+    this.allVehicles.find((vehicle) => {
+      if (vehicle.plate === plate) {
+        return vehicle
+      } else {
+        return console.log(Message.VEHICLE_NOT_FOUND)
+      }
+    })
+  }
 }
-
