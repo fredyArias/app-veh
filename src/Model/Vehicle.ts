@@ -15,4 +15,8 @@ export class Vehicle {
     ;(this.plate = plate), (this.brand = brand), (this.model = model)
     this.status = status
   }
+
+  static fromVehicleData(vehicleData) {
+    return new Vehicle(vehicleData.plate, vehicleData.brand, vehicleData.model)
+  }
 }

@@ -1,17 +1,17 @@
-import { View } from "./View/View"
+import { View } from './View/View'
 
 export class AppVehicle {
-    private view: View
+  private view: View
 
-    constructor() {
-        this.view = new View()
-    }
+  constructor() {
+    this.view = new View()
+  }
 
-    main() {
-        this.play()
-    }
+  main() {
+    this.start()
+  }
 
-    private play() {
-        this.view.init()
-    }
+  private start() {
+    this.view.init()
+  }
 }

@@ -1,10 +1,12 @@
-import { ConLog } from '../Controller/ConLog'
+import { System } from '../Controller/System'
 import { Controller } from '../Controller/Controller'
 import { Message } from './Message'
-
 export class MainView {
-  show(controller: Controller) {
-    const inputValue = ConLog.readNumber(Message.MAIN)
-    inputValue !== 3 ? controller.start(inputValue) : ConLog.write('Exit')
+  interact(controller: Controller) {
+    const exitValue = 4
+    const inputValue = System.getInstance().readNumber(Message.MAIN)
+    inputValue !== exitValue
+      ? controller.start(inputValue)
+      : System.getInstance().printText('Exit')
   }
 }

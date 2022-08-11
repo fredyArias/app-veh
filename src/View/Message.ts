@@ -7,6 +7,7 @@ export enum Message {
     `,
   REGISTER_VEHICLE = 'Insert the dates of new vehicle',
   TYPE_VEHICLE = 'Type:',
+  ENTER_ID = 'Enter id:',
   ENTER_PLATE = 'Enter plate:',
   ENTER_BRAND = 'Enter brand:',
   ENTER_MODEL = 'Enter model:',

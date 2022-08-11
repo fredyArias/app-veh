@@ -9,8 +9,21 @@ export class SearchController {
     this.searchView
   }
 
-  getDataToSearch() {
-    this.valueToSearch = this.searchView.show()
+  getVehicle() {
+    this.getByPlate()
+  }
+
+  getVehicles() {
+    return DB.allVehicles
+  }
+
+  private getByPlate() {
+    this.valueToSearch = this.searchView.interact()
+    this.search()
+  }
+
+  private getById() {
+    this.valueToSearch = this.valueToSearch = this.searchView.interact()
     this.search()
   }
 

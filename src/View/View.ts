@@ -11,10 +11,6 @@ export class View {
   }
 
   init() {
-    this.show(this.main)
-  }
-
-  private show(view: MainView) {
-    view.show(this.controller)
+    this.main.interact(this.controller)
   }
 }

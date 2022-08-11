@@ -1,13 +1,17 @@
-import { ConLog } from '../Controller/ConLog'
+import { System } from '../Controller/System'
 import { Message } from './Message'
 
 export class SearchView {
-  show() {
-    ConLog.write(Message.SEARCH)
-    return this.getBrand()
+  interact() {
+    System.getInstance().printText(Message.SEARCH)
+    return this.getPlate()
   }
 
-  private getBrand() {
-    return ConLog.readString(Message.ENTER_BRAND)
+  private getPlate() {
+    return System.getInstance().readString(Message.ENTER_PLATE)
+  }
+
+  private getId() {
+    return System.getInstance().readString(Message.ENTER_ID)
   }
 }

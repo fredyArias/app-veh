@@ -1,3 +1,4 @@
+import { System } from '../Controller/System'
 import { Message } from '../View/Message'
 import { Vehicle } from './Vehicle'
 
@@ -5,7 +6,9 @@ export abstract class DB {
   static allVehicles: Vehicle[]
 
   static add(vehicle: Vehicle) {
-    this.allVehicles.push(vehicle)
+    console.log('vehículo guardado correctamente')
+
+    // this.allVehicles.push(vehicle)
   }
 
   static search(plate: string) {
@@ -13,7 +16,7 @@ export abstract class DB {
       if (vehicle.plate === plate) {
         return vehicle
       } else {
-        return console.log(Message.VEHICLE_NOT_FOUND)
+        return System.getInstance().printText(Message.VEHICLE_NOT_FOUND)
       }
     })
   }
