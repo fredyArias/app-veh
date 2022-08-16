@@ -10,7 +10,7 @@ export class View {
     this.main = new MainView()
   }
 
-  init() {
+  interact() {
     this.main.interact(this.controller)
   }
 }

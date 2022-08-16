@@ -1,10 +1,15 @@
 var readline = require('readline')
 var rl = readline.createInterface(process.stdin, process.stdout)
+import { Console } from 'console-mpds'
+const console = new Console()
+
+export function readNumber(output) {
+  return console.readNumber(output)
+}
 
 export class System {
   static instance: System | null = null
   inputNumberValue: number
-  inputStringValue: string
 
   static getInstance() {
     if (this.instance === null) {
@@ -15,23 +20,37 @@ export class System {
 
   private constructor() {}
 
-  readNumber(outputText: string): number {
-    rl.question(`${outputText}\n`, (inputValue: number) => {
+  readNumber(output: string): number {
+    rl.question(`${output}\n`, (inputValue: number) => {
       this.inputNumberValue = inputValue
-      process.exit()
     })
     return this.inputNumberValue
   }
 
+  // read(output: any, input: any) {
+  //   rl.question()
+  // }
+
+  // readNumber(outputText: string) {
+  //   rl.question(`${outputText}\n`, (inputValue: number) => {
+  //     this.inputNumberValue = inputValue
+  //   })
+  //   return this.inputNumberValue
+  // }
+
   readString(outputText: string): string {
-    rl.question(`${outputText}\n`, (inputValue: string) => {
-      this.inputStringValue = inputValue
-      process.exit()
-    })
-    return this.inputStringValue
+    // rl.question(`${outputText}\n`, (inputValue: string) => {
+    //   this.inputStringValue = inputValue
+    // })
+    return ''
   }
 
-  printText(outputText: number | string) {
-    console.log(outputText)
+  printText(outputText: string) {
+    // this.inputStringValue = outputText
+    // this.getInputValue()
   }
+
+  // getInputValue() {
+  //   return this.inputStringValue
+  // }
 }

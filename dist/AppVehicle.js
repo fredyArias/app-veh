@@ -10,7 +10,7 @@ var AppVehicle = /** @class */ (function () {
         this.start();
     };
     AppVehicle.prototype.start = function () {
-        this.view.init();
+        this.view.interact();
     };
     return AppVehicle;
 }());

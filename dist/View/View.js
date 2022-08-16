@@ -8,7 +8,7 @@ var View = /** @class */ (function () {
         this.controller = new Controller_1.Controller();
         this.main = new MainView_1.MainView();
     }
-    View.prototype.init = function () {
+    View.prototype.interact = function () {
         this.main.interact(this.controller);
     };
     return View;

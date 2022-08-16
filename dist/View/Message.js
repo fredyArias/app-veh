@@ -11,6 +11,7 @@ var Message;
     Message["ENTER_PLATE"] = "Enter plate:";
     Message["ENTER_BRAND"] = "Enter brand:";
     Message["ENTER_MODEL"] = "Enter model:";
+    Message["EXIT"] = "Exit...";
     Message["VEHICLE_FOUND"] = "Vehicle found";
     Message["VEHICLE_NOT_FOUND"] = "Vehicle not found";
     Message["SEARCH"] = "Search:";

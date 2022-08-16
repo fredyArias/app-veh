@@ -12,6 +12,6 @@ export class AppVehicle {
   }
 
   private start() {
-    this.view.init()
+    this.view.interact()
   }
 }

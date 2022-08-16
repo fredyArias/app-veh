@@ -10,9 +10,11 @@ var Controller = /** @class */ (function () {
     Controller.prototype.start = function (value) {
         switch (value) {
             case 1:
-                this.registator.addVehicle();
+                console.log('Option 1 <<');
+                // this.registator.addVehicle()
                 break;
             case 2:
+                console.log('Option2 <<');
             // this.search.getVehicle()
             default:
                 break;

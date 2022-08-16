@@ -1,8 +1,8 @@
-var readline = require('readline')
+import { Console } from 'console-mpds'
+const console = new Console()
 
-var rl = readline.createInterface(process.stdin, process.stdout)
-
-rl.question('Cual es tu nombre?\n', (respuesta) => {
-  console.log(`Hola, ${respuesta}!`)
-  process.exit()
-})
+const min = console.readNumber(`Introduce el mínimo del intervalo:`)
+const max = console.readNumber(
+  `Introduce el máximo del intervalo (superior o igual al mínimo):`
+)
+console.write(`La longitud del intervalo [${min}, ${max}] es ${max - min}`)

@@ -11,6 +11,7 @@ export enum Message {
   ENTER_PLATE = 'Enter plate:',
   ENTER_BRAND = 'Enter brand:',
   ENTER_MODEL = 'Enter model:',
+  EXIT = 'Exit...',
   VEHICLE_FOUND = 'Vehicle found',
   VEHICLE_NOT_FOUND = 'Vehicle not found',
   SEARCH = 'Search:',
