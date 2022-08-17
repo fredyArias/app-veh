@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.readNumber = void 0;
+exports.readNumber = exports.readString = exports.writeln = exports.write = void 0;
 var readlineSync = require('readline-sync');
 var input = function (prompt) {
     var userInput = readlineSync.question(prompt);
@@ -11,14 +11,17 @@ function write(value) {
         process.stdout.write("".concat(value));
     }
 }
+exports.write = write;
 function writeln(value) {
     write(value);
     write("\n");
 }
+exports.writeln = writeln;
 function readString(title) {
     write(title);
     return input(' ');
 }
+exports.readString = readString;
 function readNumber(title) {
     var input;
     do {

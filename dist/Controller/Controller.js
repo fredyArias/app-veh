@@ -4,14 +4,13 @@ exports.Controller = void 0;
 var RegistratorController_1 = require("./RegistratorController");
 var Controller = /** @class */ (function () {
     function Controller() {
-        this.registator = new RegistratorController_1.RegistratorController();
+        this.registrator = new RegistratorController_1.RegistratorController();
         // this.search = new SearchController()
     }
     Controller.prototype.start = function (value) {
         switch (value) {
             case 1:
-                console.log('Option 1 <<');
-                // this.registator.addVehicle()
+                this.registrator.addVehicle();
                 break;
             case 2:
                 console.log('Option2 <<');

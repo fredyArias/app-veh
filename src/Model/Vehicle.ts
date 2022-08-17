@@ -3,13 +3,13 @@ export type StatusVehicle = 'onSale' | 'soldOut'
 export class Vehicle {
   plate: string
   brand: string
-  model: number
+  model: string
   status: StatusVehicle
 
   constructor(
     plate: string,
     brand: string,
-    model: number,
+    model: string,
     status: StatusVehicle = 'onSale'
   ) {
     ;(this.plate = plate), (this.brand = brand), (this.model = model)

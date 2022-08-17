@@ -5,18 +5,18 @@ const input = (prompt) => {
   return userInput
 }
 
-function write(value) {
+export function write(value) {
   if (value !== undefined) {
     process.stdout.write(`${value}`)
   }
 }
 
-function writeln(value) {
+export function writeln(value) {
   write(value)
   write(`\n`)
 }
 
-function readString(title) {
+export function readString(title) {
   write(title)
   return input(' ')
 }

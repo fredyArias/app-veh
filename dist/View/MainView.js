@@ -8,8 +8,12 @@ var MainView = /** @class */ (function () {
     }
     MainView.prototype.interact = function (controller) {
         var exitValue = 4;
-        var inputValue = (0, IO_1.readNumber)(Message_1.Message.MAIN);
-        inputValue !== exitValue ? controller.start(inputValue) : console.log('Exit...');
+        var inputValue = 0;
+        do {
+            (0, IO_1.writeln)(Message_1.Message.APP_TITLE);
+            inputValue = (0, IO_1.readNumber)(Message_1.Message.MAIN);
+            inputValue !== exitValue ? controller.start(inputValue) : (0, IO_1.writeln)(Message_1.Message.EXIT);
+        } while (inputValue !== exitValue);
     };
     return MainView;
 }());

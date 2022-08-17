@@ -1,13 +1,13 @@
-import { System } from '../Controller/System'
+import { readString, writeln } from '../Controller/IO'
 import { Message } from '../View/Message'
 
 export class RegistratorView {
   interact() {
-    System.getInstance().printText(Message.REGISTER_VEHICLE)
-    const plate = System.getInstance().readString(Message.ENTER_PLATE)
-    const brand = System.getInstance().readString(Message.ENTER_BRAND)
-    const model = System.getInstance().readString(Message.ENTER_MODEL)
+    writeln(Message.REGISTER_VEHICLE)
+    const brand = readString(Message.ENTER_BRAND)
+    const model = readString(Message.ENTER_MODEL)
+    const plate = readString(Message.ENTER_PLATE)
 
-    return { plate, brand, model }
+    return { brand, model, plate }
   }
 }

@@ -14,20 +14,20 @@ export class SearchController {
   }
 
   getVehicles() {
-    return DB.allVehicles
+    // return DB.allVehicles
   }
 
   private getByPlate() {
-    this.valueToSearch = this.searchView.interact()
-    this.search()
+    // this.valueToSearch = this.searchView.interact()
+    // this.search()
   }
 
   private getById() {
-    this.valueToSearch = this.valueToSearch = this.searchView.interact()
-    this.search()
+    // this.valueToSearch = this.valueToSearch = this.searchView.interact()
+    // this.search()
   }
 
   private search() {
-    DB.search(this.valueToSearch)
+    // DB.search(this.valueToSearch)
   }
 }

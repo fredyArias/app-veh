@@ -9,8 +9,8 @@ var RegistratorController = /** @class */ (function () {
         this.registratorView = new RegistratorView_1.RegistratorView();
     }
     RegistratorController.prototype.addVehicle = function () {
-        var vehicleData = this.registratorView.interact();
-        DB_1.DB.add(Vehicle_1.Vehicle.fromVehicleData(vehicleData));
+        var _a = this.registratorView.interact(), plate = _a.plate, brand = _a.brand, model = _a.model;
+        DB_1.DB.getInstance().add(new Vehicle_1.Vehicle(plate, brand, model));
     };
     return RegistratorController;
 }());

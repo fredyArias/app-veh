@@ -10,7 +10,7 @@ export class RegistratorController {
   }
 
   addVehicle() {
-    const vehicleData = this.registratorView.interact()
-    DB.add(Vehicle.fromVehicleData(vehicleData))
+    const { plate, brand, model } = this.registratorView.interact()
+    DB.getInstance().add(new Vehicle(plate, brand, model))
   }
 }
